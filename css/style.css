@@ -1,0 +1,170 @@
+/*---------------------Global------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
+@import url('list.css');
+@import url('page.css');
+:root {
+    --text-color: #5d5f61;
+    --hover: rgba(218, 214, 214, 0.966);  
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("assets/background.jpg");
+    background-size: cover;
+    background-position: 50%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Saira Condensed' , sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+} 
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 3.5px;
+}
+
+#logo {
+    margin-top: 5px;
+    margin-left: 15px;
+    letter-spacing: 5px;
+}
+
+.footer {
+    margin: 0 auto;
+    margin-top: auto;
+}
+/*-----------X---------Global---------X--------------*/
+
+/*----------------------Nav-------------------------*/
+header , nav {
+    text-transform: uppercase;
+    background-color: transparent;
+    margin-bottom: 35px;
+}
+
+#toggle {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    background: transparent;
+    position: relative;
+    margin-top: 8px;
+    width: 65vw;
+    padding-left: 40px;
+    bottom: 65px;
+    left: 35vw;
+}
+
+.nav-items {
+    margin-top: 3px;
+    padding: 0px 10px 0px 10px;
+}
+
+.nav-items a {
+    padding: 0px 20px 0px 20px;
+    letter-spacing: 3px;
+}
+
+.nav-items a:hover {
+    color: #0B0C10;
+    border-radius: 30px;
+    background-color: rgb(197, 194, 194);
+}
+
+#burger-menu {
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    margin: 4px auto;
+    cursor: pointer;
+    top: 0%;
+    right: 0%;
+    margin-right: 15px;
+}
+
+.burger-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px 0px;
+    border-radius: 40px;
+    background-color: var(--text-color);
+}
+/*------------X---------Nav---------X---------------*/
+
+/*----------------------Home-------------------------*/
+.index-btn {
+    display: flex;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #282929da;
+    margin-top: 30vh;
+    padding: 5px 20px 5px 20px;
+    letter-spacing: 2px;
+    border-radius: 30px;
+}
+
+.index-btn h1 {
+    font-size:x-large;
+    color: rgb(218, 214, 214);
+}
+
+.index-btn:hover {
+    background-color: #919191;
+    border: 0.5px solid var(--text-color);
+}
+/*-----------X----------Home-----------X-------------*/
+
+/*----------------------Mobile-------------------------*/
+@media only screen and (max-width:768px) {
+    .nav-links {
+        display: none;
+        margin: 0 auto;
+        justify-items: center;
+        width: 94vw;
+        padding-left: 0px;
+        bottom: 0px;
+        left: 0vw;
+    }
+
+    .nav-items a {
+        display: block;
+        padding: 5px;
+        margin: 10px;
+        letter-spacing: 5px;
+        border-radius: 30px;
+    }
+
+    #burger-menu {
+        display: block; 
+    }
+
+    #toggle:checked + .nav-links {
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+/*--------------X-------Mobile--------X----------------*/
